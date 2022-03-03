@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-family: Stay Pixel;
+    font-family: StayPixel;
     font-style: normal;
 
     position: absolute;
@@ -14,15 +14,29 @@ body {
             animation: color-change-4x 6s linear infinite alternate both;
 }
 
+@font-face {
+    font-family: StayPixel;
+    src: url("/fonts/StayPixelRegular.ttf") format("truetype");
+
+    font-weight: bold;
+    font-style: normal;
+}
+
 .kiowe {
     font-weight: 600;
     font-size: 142px;
     line-height: 142px;
 
     color: #FFFFFF;
-    background: -webkit-linear-gradient(#FFFFFF, #dadada);
+    background: -webkit-linear-gradient(#ffffff, #dadada); /* For Chrome and Safari */
+    background: -moz-linear-gradient(#ffffff, #dadada); /* For old Fx (3.6 to 15) */
+    background: -ms-linear-gradient(#ffffff, #dadada); /* For pre-releases of IE 10*/
+    background: -o-linear-gradient(#ffffff, #dadada); /* For old Opera (11.1 to 12.0) */
+    background: linear-gradient(#ffffff, #dadada); /* Standart syntax */
+    
+    color: transparent;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: text;
 
     -webkit-animation: slide-in-blurred-top 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
             animation: slide-in-blurred-top 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
@@ -39,9 +53,15 @@ body {
 
 .clown {
     color: #f87d7d;
-    background: -webkit-linear-gradient(#f87d7d, #c05a5a);
+    background-image: -webkit-linear-gradient(#f87d7d, #c05a5a); /* For Chrome and Safari */
+    background-image: -moz-linear-gradient(#f87d7d, #c05a5a); /* For old Fx (3.6 to 15) */
+    background-image: -ms-linear-gradient(#f87d7d, #c05a5a); /* For pre-releases of IE 10*/ 
+    background-image: -o-linear-gradient(#f87d7d, #c05a5a); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(#f87d7d, #c05a5a); /* Standart syntax */
+    
+    color: transparent;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: text;
 }
 
 img {
@@ -85,31 +105,31 @@ img {
 /* ANIMATION FOR BACKGROUND */
 @-webkit-keyframes color-change-4x {
     0% {
-      background: #19dcea;
+        background: #19dcea;
     }
     33.3333% {
-      background: #b22cff;
+        background: #b22cff;
     }
     66.666% {
-      background: #22ea75;
+        background: #22ea75;
     }
     100% {
-      background: #f5be10;
+        background: #f5be10;
     }
 }
 
 @keyframes color-change-4x {
     0% {
-      background: #19dcea;
+        background: #19dcea;
     }
     33.3333% {
-      background: #b22cff;
+        background: #b22cff;
     }
     66.666% {
-      background: #22ea75;
+        background: #22ea75;
     }
     100% {
-      background: #f5be10;
+        background: #f5be10;
     }
 }
   
@@ -117,47 +137,47 @@ img {
 /* ANIMATION FOR "KIOWE" */
 @-webkit-keyframes slide-in-blurred-top {
     0% {
-      -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-              transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(25px);
-              filter: blur(25px);
-              filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
-      opacity: 0;
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+                transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(25px);
+                filter: blur(25px);
+                filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
+        opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-              filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
-      opacity: 1;
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+                filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
+        opacity: 1;
     }
-  }
+}
 
 @keyframes slide-in-blurred-top {
     0% {
-      -webkit-transform: translateY(-200px) scaleY(2.5) scaleX(0.2);
-              transform: translateY(-200px) scaleY(2.5) scaleX(0.2);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(25px);
-              filter: blur(25px);
-              filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-      opacity: 0;
+        -webkit-transform: translateY(-200px) scaleY(2.5) scaleX(0.2);
+                transform: translateY(-200px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(25px);
+                filter: blur(25px);
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+        opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-              filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
-      opacity: 1;
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+                filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4));
+        opacity: 1;
     }
 }
   
@@ -165,47 +185,47 @@ img {
 /* ANIMATION FOR "CLOWN" */
 @-webkit-keyframes slide-in-blurred-bottom {
     0% {
-      -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-              transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
-      -webkit-transform-origin: 50% 100%;
-              transform-origin: 50% 100%;
-      -webkit-filter: blur(25px);
-              filter: blur(25px);
-              filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-      opacity: 0;
+        -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+                transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
+                transform-origin: 50% 100%;
+        -webkit-filter: blur(25px);
+                filter: blur(25px);
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+        opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-              filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
-      opacity: 1;
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+                filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
+        opacity: 1;
     }
 }
 
 @keyframes slide-in-blurred-bottom {
     0% {
-      -webkit-transform: translateY(200px) scaleY(2.5) scaleX(0.2);
-              transform: translateY(200px) scaleY(2.5) scaleX(0.2);
-      -webkit-transform-origin: 50% 100%;
-              transform-origin: 50% 100%;
-      -webkit-filter: blur(25px);
-              filter: blur(25px);
-              filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-      opacity: 0;
+        -webkit-transform: translateY(200px) scaleY(2.5) scaleX(0.2);
+                transform: translateY(200px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
+                transform-origin: 50% 100%;
+        -webkit-filter: blur(25px);
+                filter: blur(25px);
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+        opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-              transform: translateY(0) scaleY(1) scaleX(1);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-              filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
-      opacity: 1;
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+                filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
+        opacity: 1;
     }
 }
   
@@ -213,46 +233,46 @@ img {
 /* ANIMATION FOR ICONS */
 @-webkit-keyframes scale-in-top {
     0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(25px);
-              filter: blur(25px); 
-              filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-      opacity: 0;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(25px);
+                filter: blur(25px); 
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+        opacity: 0;
     }
     100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-              filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.4));
-      opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+                filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.4));
+        opacity: 1;
     }
-  }
+}
 
 @keyframes scale-in-top {
     0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(25px);
-              filter: blur(25px); 
-              filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-      opacity: 0;
-    }
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(25px);
+                filter: blur(25px); 
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+        opacity: 0;
+    }  
     100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: 50% 0%;
-              transform-origin: 50% 0%;
-      -webkit-filter: blur(0);
-              filter: blur(0);
-              filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.4));
-      opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+                filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.4));
+        opacity: 1;
     }
 }
