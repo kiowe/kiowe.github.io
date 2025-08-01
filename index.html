@@ -121,7 +121,7 @@
             <div class="nickname">kiowe</div>
             <div class="timer">
                 <div class="time-unit">
-                    <div class="number" id="days">000</div>
+                    <div class="number" id="days">0</div>
                     <div class="label">days</div>
                 </div>
                 <div class="time-unit">
@@ -147,7 +147,7 @@
                 10.11.2024 — 10.11.2025
             </div>
         </div>
-        <img src="src/webp/aliendancing.webp" alt="damm he moves" class="alien-image">
+        <img src="src/webp/aliendancing.webp" alt="Dancing Alien" class="alien-image">
     </div>
 
     <script>
@@ -161,7 +161,7 @@
             const elapsed = now - startDate;
             
             if (diff <= 0) {
-                document.getElementById('days').textContent = '000';
+                document.getElementById('days').textContent = '0';
                 document.getElementById('hours').textContent = '00';
                 document.getElementById('minutes').textContent = '00';
                 document.getElementById('seconds').textContent = '00';
@@ -175,7 +175,7 @@
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
-            document.getElementById('days').textContent = days.toString().padStart(3, '0');
+            document.getElementById('days').textContent = days;
             document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
